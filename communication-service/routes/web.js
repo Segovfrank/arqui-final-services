@@ -3,7 +3,7 @@ const paymentController = require('../controllers/payment');
 const statusController = require('../controllers/status');
 
 router.get('/payment', paymentController.createPayment);
-router.post('/status/get', statusController.get);
-router.post('/status/update', statusController.update);
+router.get('/status/get', statusController.get);
+router.get('/status/update', statusController.update);
 
 module.exports = router;
