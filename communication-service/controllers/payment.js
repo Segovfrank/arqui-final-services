@@ -1,4 +1,13 @@
 
 exports.createPayment = (req, res) => {
-    res.sendStatus(200);
+    setTimeout(function() {
+        res.sendStatus(200);
+    }, 800);
+}
+
+
+exports.processTransaction = (req, res) => {
+    setTimeout(function() {
+        res.sendStatus(200);
+    }, 1200);
 }
