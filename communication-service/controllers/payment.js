@@ -1,13 +1,13 @@
 
 exports.createPayment = (req, res) => {
     setTimeout(function() {
-        res.sendStatus(200);
+        res.json('Pago exitoso');
     }, 800);
 }
 
 
 exports.processTransaction = (req, res) => {
     setTimeout(function() {
-        res.sendStatus(200);
+        res.json('Transacción exitosa');
     }, 1200);
 }

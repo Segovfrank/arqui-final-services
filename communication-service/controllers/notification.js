@@ -4,7 +4,7 @@ exports.sendOrder = (req, res) => {
     let amount = req.body.amount;
 
     setTimeout(function() {
-        res.status(200).send('(' + amount + ') - ' + order + ' tomada exitosamente!');
+        res.json('(' + amount + ') - ' + order + ' tomada exitosamente!');
 
     }, 500);
 }
@@ -14,7 +14,7 @@ exports.sendTicket = (req, res) => {
     let ticketProblem = req.body.ticket;
 
     setTimeout(function() {
-        res.status(200).send('Ticket #' + ticketNumber + ' - ' + ticketProblem);
+        res.json('Ticket #' + ticketNumber + ' - ' + ticketProblem);
 
     }, 500);
 }
@@ -24,7 +24,7 @@ exports.sendTransaction = (req, res) => {
     let transaction = req.body.transaction;
 
     setTimeout(function() {
-        res.status(200).send('Transaccion #' + transactionNumber + ' - ' + transaction + ' --- generado exitosamente.');
+        res.json('Transaccion #' + transactionNumber + ' - ' + transaction + ' --- generado exitosamente.');
 
     }, 800);
 }

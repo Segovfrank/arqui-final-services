@@ -2,6 +2,7 @@
 exports.receive = (req, res) => {
     let msg = req.body.message;
     res.status(200).send('Bot recibió: ' + msg);
+    res.json('Bot recibió: ' + msg);
 
 }
 
@@ -11,5 +12,5 @@ exports.send = (req, res) => {
     ];
     let randomNum = Math.floor(Math.random() * messages.length);  
 
-    res.status(200).send(messages[randomNum]);
+    res.json(messages[randomNum]);
 }

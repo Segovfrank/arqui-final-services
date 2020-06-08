@@ -1,7 +1,7 @@
 
 exports.connect = (req, res) => {
     setTimeout(function() {
-        res.sendStatus(200);
+        res.json('Conexión con la base de datos exitosa.');
 
-    }, 500);
+    }, 900);
 }

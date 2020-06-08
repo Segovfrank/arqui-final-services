@@ -9,7 +9,14 @@ const app = express();
 
 // Receive parameters from the Form requests
 app.use(express.urlencoded({ extended: true }))
+app.use(express.json());
+app.use(function(req,res, next){
+  res.header('Acces-Control-Allow-Origin', '*');
+  res.header('Acces-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.header('Acces-Control-Allow-Headers', 'Content-Type');
+  next();
 
+})
 // Routes
 app.use('/observe', webRoutes);
 

@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const ticketController = require('../controllers/log');
-const logController = require('../controllers/ticket');
+const ticketController = require('../controllers/ticket');
+const logController = require('../controllers/log');
 const healthController = require('../controllers/healthcheck');
 
-router.get('/ticket/generate', ticketController.create);
+router.get('/ticket', ticketController.create);
 router.get('/log', logController.create);
 router.get('/healthcheck', healthController.check);
 
