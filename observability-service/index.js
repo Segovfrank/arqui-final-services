@@ -1,6 +1,7 @@
 // Imports
 const express = require('express');
 const webRoutes = require('./routes/web');
+const cors = require('cors');
 
 // Express app creation
 const app = express();
@@ -17,6 +18,7 @@ app.use(function(req,res, next){
   next();
 
 })
+app.use(cors());
 // Routes
 app.use('/observe', webRoutes);
 
